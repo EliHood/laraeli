@@ -8,7 +8,7 @@
                     <h1>Welcome</h1>
                     <p>Small Owl</p>
                     <span>
-                        <a href="#">Sign Up</a>
+                       <a href="/register">Sign Up</a>
                     </span>
                 </div>
             </header>
