@@ -5,11 +5,11 @@ Log In
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container eli-main">
         <div class="row">
             <div class="col-md-6">
                 <h1>Sign in</h1>
-                <form action="{{ url('signin') }}" method="post">
+                <form class="myform" action="{{ url('signin') }}" method="post">
                     <div class="form-group {{ $errors->has('email') ? 'has-error': '' }}">
                         <label for="email">Your E-Mail</label>
                         <input class="form-control" type="text" name="email" id="email"/>
@@ -26,7 +26,7 @@ Log In
                        </span><br/>
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="form-btn">Submit</button>
                     <input type="hidden" name="_token" value="{{ Session::token()}}"/>
                 </form>
             </div>
