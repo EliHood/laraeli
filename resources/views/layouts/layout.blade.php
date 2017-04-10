@@ -9,7 +9,7 @@
 		{!! Html::style( asset('css/animate.css')) !!}
 		{!! Html::style( asset('css/main.css')) !!}
 
-	<link rel="stylesheet" href="{!! secure_asset('css/main.css') !!}">
+
 	</head>
 	<body>
 		<!-- NAV GOES HERE -->
