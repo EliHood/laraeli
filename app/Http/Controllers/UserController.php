@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Http\Requests;
 
+
 class UserController extends Controller
 {
     public function getWelcome()
@@ -16,16 +17,6 @@ class UserController extends Controller
             return redirect()->route('dashboard');
         }
         return view('welcome',  array('user'=> Auth::user()), compact('users') );
-    }
-
-    public function getDashboard()
-    {
-        $users = User::all();
-        $user = new User();
-        $cookie = cookie('saw-dashboard', true, 15);
-//        return view('dashboard', array('user'=> Auth::user()), compact('users'))->withCookie($cookie);
-
-        return view('dashboard',array('user'=> Auth::user(), compact('users')))->withCookie($cookie);
     }
 
     

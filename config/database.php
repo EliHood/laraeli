@@ -8,9 +8,9 @@ if ($url = env('CLEARDB_DATABASE_URL', false)) {
     $database = substr($parts["path"], 1);
 } else {
     $host = env('DB_HOST', 'localhost');
-    $username = env('DB_USERNAME', 'root');
-    $password = env('DB_PASSWORD', 'root');
-    $database = env('DB_DATABASE', 'eli2');
+    $username = env('DB_USERNAME', 'forge');
+    $password = env('DB_PASSWORD', '');
+    $database = env('DB_DATABASE', 'forge');
 }
 
 return [
