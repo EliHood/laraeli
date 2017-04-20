@@ -4,8 +4,10 @@
 		<meta charset="UTF-8">
 		<title>@yield('title')</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 		<meta name="csrf-token" content="<?php echo csrf_token() ?>">
+
 		{!! Html::style( asset('css/reset.css')) !!}
 		{!! Html::style( asset('css/animate.css')) !!}
 		{!! Html::style( asset('css/main.css')) !!}
@@ -40,7 +42,14 @@
 			</nav>
 			@yield('content')
 			<footer class="eli-main">
-				<span>&copy; <?php echo date("Y"); ?></span>
+				<span>&copy; Eli <?php echo date("Y"); ?> </span>
+				<span class="social-i">
+				
+	            <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	            <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	            <a href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
+				</span>
+
 			</footer>
 
 

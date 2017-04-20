@@ -12,18 +12,7 @@ $(document).ready(function(){
 		});
 
 
-	// $(window).scroll(function(){
-	  
-	//   var wintop = $(this).scrollTop(); 
-	  
-	//   $('.eli-sec').each(function(){
-	//     if(wintop > $(this).offset().top - ($(window).height() / 1.1)){
-	//       $(this).addClass('fadeInUp animated') ;
 
-	//     }
-	//   });
-
-	// });
 
 	$(window).scroll(function(){
 		  var sec = $('.eli-sec'),

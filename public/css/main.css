@@ -15,6 +15,14 @@ overflow-x:hidden;
 -moz-box-sizing: inherit;
 box-sizing: inherit;
 }
+
+.404-image{
+	width: 100%;
+	min-height: 200px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
 .wrapper{
 width: 100%;
 position: relative;
@@ -34,8 +42,10 @@ width:100%;
 min-height: 180px;
 background-color:#333;
 position: relative;
-padding: 0px !important;
+transition:transform 0.6s ease;
+
 bottom: 0px;
+padding: 40px;
 left: 0px;
 display: block;
 right:0px;
@@ -47,13 +57,46 @@ display: block;
 margin:0px auto;
 text-align: center;
 color: #fff;
-line-height:180px;
+line-height:90px;
+
 }
+
+.social-i{
+	line-height: 90px;
+}
+
+.fa {
+
+padding: 1.5em;
+width:30px; /** fix width ***/
+margin: 0.4em 0.7em;
+text-align: center;
+display: inline;
+border-radius: 60%;
+font-size: 1em !important;
+cursor: pointer;
+
+border: 1px solid #FCC8B2;
+
+}
+
+footer a{
+	color: #FCC8B2;
+	text-decoration: none;
+}
+footer a:hover{
+text-decoration: none;
+color: #FCC8B2;
+}
+
 body{
 font-family: 'Montserrat', sans-serif;
-font-size: 14px;
+font-size: 16px;
 overflow-x:hidden;
 margin: 0px;
+letter-spacing: 1.5px;
+line-height: 1.3;
+
 }
 h1{
 font-size: 48px;
@@ -119,6 +162,11 @@ transition:transform 0.6s ease;
 	margin: 40px 0px;
 }
 
+.make-post{
+	margin-bottom: 40px;
+}
+
+
 .myform label
 {
    margin-bottom: 15px;
@@ -147,10 +195,17 @@ transition:transform 0.6s ease;
 	background-color:#fff;
 }
 
+
+}
 /*END FORM STYLING*/
 .eli-main{
 transform:translateX(0);
 transition:transform 0.6s ease;
+
+}
+
+.eli-main span{
+	margin-right:0.2em;
 }
 .menu{
 list-style: none;
@@ -225,8 +280,8 @@ bottom:0px;
 right:0px;
 }
 header{
-padding: 140px 0px 170px 200px;
-z-index: -999;
+padding: 140px 0px 110px 100px;
+
 }
 header h1{
 font-size: 72px;
@@ -242,6 +297,7 @@ header p{
 text-align: left;
 color: #fff;
 font-size: 24px;
+width: 800px;
 }
 header span{
 margin: 60px 0px;
@@ -252,6 +308,10 @@ transition:0.6s ease;
 border: 2px solid #fff;
 padding: 20px;
 position: relative;
+}
+
+.head-span{
+	width: 800px;
 }
 #left-head-but{
 margin-left: 40px;
@@ -277,6 +337,7 @@ padding-bottom: 40px;
 padding: 30px;
 transform-style: preserve-3d;
 transform: perspective(800px);
+transition:transform 0.6s ease;
 }
 .about h1{
 text-align: center;
@@ -293,11 +354,15 @@ margin-bottom: 40px;
 .about p{
 color: #fff;
 word-wrap: break-word;
-font-size: 16px;
+
 transition: all 0.8s ease;
 }
 .eli-sec{
 margin-bottom: 50px;
+}
+
+.eli-sec p{
+	text-align: center;
 }
 /*.about:nth-child(1) div.col-md-4 {
 transition-delay: 0.08s;
@@ -321,6 +386,7 @@ margin-bottom: 20px;
 	width:100%;
 	min-height: 600px;
 	background-color:rgba(238,238,238,.35);
+	transition:transform 0.6s ease;
 }
 
 .dashboard h1{
@@ -379,14 +445,39 @@ border: 2px solid #333;
 padding: 20px;
 position: relative;
 }
+
+.mybtn2:focus{
+	outline:none;
+
+}
 .post{
 	margin-bottom: 50px;
 }
 
+.post-bod{
+	margin: 0px;
+	white-space: nowrap;
+    overflow:auto;
+}
+
 .post .post-bod{
-	padding-bottom: 20px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 
 }
+
+textarea.form-control{
+	border: none;
+	padding: 20px;
+	outline: none;
+	transition: outline 0.2s ease;
+}
+
+textarea.form-control:focus{
+	outline: 2px solid #FCC8B2;
+	transition: outline 0.2s ease;
+}
+
 .mybtn:hover{
 background-color: #FFF;
 transition:0.4s ease;
@@ -459,4 +550,118 @@ color: #fff;
 padding: 0px;
 line-height: 36px;
 word-wrap: break-word;
+}
+
+
+#post-body{
+white-space: pre-wrap;
+	max-width: 100%;
+	width: 100%;
+	margin-top: 10px;
+	height: auto;
+
+    overflow:auto;
+}
+
+.line{
+	width: 50px;
+	height: 1px;
+	background-color: #333;
+	display: block;
+	margin: 20px auto;
+}
+
+.about2{
+	width: 100%;
+	min-height: 400px;
+	background-color: #fff;
+	transition:transform 0.6s ease;
+}
+
+.about2 h1{
+	text-align: center;
+	padding: 30px;
+
+}
+
+
+
+/*FLEXBOX*/
+
+.about2 section{
+	padding: 30px 0px;
+	max-width: 1440px;
+  margin: 0 auto;
+    display: flex;
+}
+
+.column {
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.column p{
+	line-height: 34px;
+}
+.column h3{
+	padding: 30px 0px;
+}
+
+.about2 section:first-of-type .column:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 0;
+}
+
+@media only screen and (max-width: 908px) {
+
+header{
+	padding: 20px;
+	margin: 0px;
+
+}
+.about2 section{
+ display: grid;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.column {
+	display: block;
+min-width: 280px;
+	flex: 1 0 280px;
+}
+
+.about2 section:first-of-type .column:first-of-type{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+    flex-wrap: wrap;
+  min-width: 180px;
+
+}
+.head-span{
+	width: 100%;
+}
+header h1{
+font-size: 42px;
+text-align: center;
+padding: 20px;
+}
+
+header p{
+	text-align: center;
+	width: 100%;
+}
+
+header span{
+	display: block;
+	font-size: 24px;
+
+}
+
+
 }
